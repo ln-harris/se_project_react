@@ -6,7 +6,6 @@
 
 .header__logo {
   margin-right: 24px;
-  margin-left: 40px;
 }
 
 .header__date-and-location {
@@ -44,6 +43,5 @@
   line-height: 100%;
 }
 
-.header__avatar {
-  margin-right: 40px;
-}
+/* .header__avatar {
+} */

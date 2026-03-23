@@ -1,0 +1,20 @@
+.footer {
+  display: flex;
+  padding-bottom: 24px;
+}
+
+.footer__author {
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 500px;
+  font-style: medium;
+  font-size: 16px;
+  line-height: 20px;
+}
+.footer__year {
+  margin-left: auto;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 500px;
+  font-style: medium;
+  font-size: 16px;
+  line-height: 20px;
+}
