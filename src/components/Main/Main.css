@@ -9,8 +9,8 @@
 .cards__text {
   margin-top: 40px;
   margin-bottom: 50px;
-  font-weight: 700px;
-  font-style: bold;
+  font-weight: 700;
+  font-style: normal;
   font-size: 20px;
   line-height: 100%;
 }
@@ -21,37 +21,4 @@
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-}
-
-.cards__item {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.cards__title {
-  position: absolute;
-  top: 15px;
-
-  display: inline-block;
-  padding: 2px 12px;
-  margin: 0;
-  border: none;
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 1);
-
-  color: rgba(0, 0, 0, 0.6);
-  font-weight: 700px;
-  font-style: bold;
-  font-size: 16px;
-  line-height: 20px;
-}
-
-.cards__image {
-  display: block;
-  height: 328px;
-  width: 325px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 19px;
-  box-sizing: border-box;
 }
