@@ -15,12 +15,15 @@ export const filterWeatherData = (data) => {
   result.city = data.name;
   result.temp = { F: data.main.temp };
   result.type = getWeatherType(result.temp.F);
+  result.condition = data.weather[0].main.toLowerCase();
+  result.isDay = isDay(data.sys);
   return result;
 };
 
-// "hot" if it is at least 86 degrees
-// "warm" if it is at least 66 degrees, but less than 86
-// "cold" otherwise
+const isDay = ({ sunrise, sunset }) => {
+  const currentTime = Date.now() / 1000;
+  return currentTime >= sunrise && currentTime < sunset;
+};
 
 const getWeatherType = (temperature) => {
   if (temperature >= 86) {

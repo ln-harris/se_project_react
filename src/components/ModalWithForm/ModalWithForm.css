@@ -28,10 +28,12 @@
   border: none;
   padding: 0;
   font-size: 22px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .modal__close:hover {
   opacity: 1;
+  transform: translateY(-2px);
 }
 
 .modal__content {
