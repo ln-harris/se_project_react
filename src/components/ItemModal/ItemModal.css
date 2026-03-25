@@ -38,8 +38,16 @@
 
 .modal__caption {
   margin: 0;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 24px;
 }
 
 .modal__weather {
   margin: 0;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 24px;
 }
