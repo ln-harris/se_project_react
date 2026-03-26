@@ -1,5 +1,8 @@
 import "./WeatherCard.css";
-import { weatherOptions } from "../../utils/constants";
+import {
+  weatherOptions,
+  defaultWeatherOptions,
+} from "../../utils/constants.js";
 
 function WeatherCard({ weatherData }) {
   const filteredOptions = weatherOptions.filter((option) => {
@@ -11,7 +14,9 @@ function WeatherCard({ weatherData }) {
 
   let weatherOption;
   if (filteredOptions.length === 0) {
-    weatherOption = weatherOptions[0];
+    weatherOption = weatherData.isDay
+      ? defaultWeatherOptions.day
+      : defaultWeatherOptions.night;
   } else {
     weatherOption = filteredOptions[0];
   }

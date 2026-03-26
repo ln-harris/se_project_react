@@ -36,7 +36,6 @@ Images of the site will go here:
 
 ## Plans for Improvement
 
-- ➕ Add the ability for users to create and save their own clothing items
 - ⚠️ Improve error handling and loading states for the weather API
 - 📱 Add a more polished responsive design for mobile devices
 - 🌗 Add light/dark mode
