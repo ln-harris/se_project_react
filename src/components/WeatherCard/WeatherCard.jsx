@@ -6,7 +6,7 @@ import {
 import { useContext } from "react";
 import currentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnitContext.jsx";
 
-function WeatherCard({ weatherData, isLoading }) {
+function WeatherCard({ weatherData, isLoading, weatherError }) {
   const { currentTemperatureUnit } = useContext(currentTemperatureUnitContext);
   const filteredOptions = weatherOptions.filter((option) => {
     return (
@@ -31,10 +31,10 @@ function WeatherCard({ weatherData, isLoading }) {
       <div className="weather-card__temp">
         {isLoading ? (
           "Loading..."
+        ) : weatherError ? (
+          "Weather unavailable"
         ) : (
-          <>
-            {weatherData.temp[currentTemperatureUnit]}&deg;{currentTemperatureUnit}
-          </>
+          `${weatherData.temp[currentTemperatureUnit]}°${currentTemperatureUnit}`
         )}
       </div>
       <img

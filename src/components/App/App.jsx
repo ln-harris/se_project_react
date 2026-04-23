@@ -32,6 +32,8 @@ function App() {
   const [clothingItems, setClothingItems] = useState([]);
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
   const [isDeleting, setIsDeleting] = useState(false);
+  const [addItemError, setAddItemError] = useState("");
+  const [weatherError, setWeatherError] = useState("");
 
   const mapApiItem = (item) => ({
     ...item,
@@ -48,6 +50,7 @@ function App() {
   };
 
   const handleAddClick = () => {
+    setAddItemError("");
     setActiveModal("add-garment");
   };
 
@@ -56,16 +59,24 @@ function App() {
   };
 
   const closeActiveModal = () => {
+    setAddItemError("");
     setActiveModal("");
   };
 
   const handleAddItemSubmit = ({ name, imageUrl, weather }, resetForm) => {
-    return addClothingItem({ name, imageUrl, weather }).then((item) => {
-      setClothingItems([mapApiItem(item), ...clothingItems]);
-      resetForm();
-      closeActiveModal();
-      return item;
-    });
+    setAddItemError("");
+
+    return addClothingItem({ name, imageUrl, weather })
+      .then((item) => {
+        setClothingItems((prevItems) => [mapApiItem(item), ...prevItems]);
+        resetForm();
+        closeActiveModal();
+        return item;
+      })
+      .catch((err) => {
+        console.error(err);
+        setAddItemError("Unable to add item right now. Please try again.");
+      });
   };
 
   const handleDeleteConfirm = () => {
@@ -73,8 +84,8 @@ function App() {
 
     return deleteClothingItem(selectedCard._id)
       .then(() => {
-        setClothingItems(
-          clothingItems.filter((item) => item._id !== selectedCard._id),
+        setClothingItems((prevItems) =>
+          prevItems.filter((item) => item._id !== selectedCard._id),
         );
         setSelectedCard({});
         closeActiveModal();
@@ -106,8 +117,12 @@ function App() {
       .then((data) => {
         const filteredData = filterWeatherData(data);
         setWeatherData(filteredData);
+        setWeatherError("");
       })
-      .catch(console.error)
+      .catch((err) => {
+        console.error(err);
+        setWeatherError("Unable to load weather data right now.");
+      })
       .finally(() => {
         setIsLoading(false);
       });
@@ -134,6 +149,7 @@ function App() {
               element={
                 <Main
                   isLoading={isLoading}
+                  weatherError={weatherError}
                   weatherData={weatherData}
                   clothingItems={clothingItems}
                   onCardClick={handleCardClick}
@@ -156,6 +172,7 @@ function App() {
         <AddItemModal
           isOpen={activeModal === "add-garment"}
           buttonText="Add garment"
+          errorMessage={addItemError}
           onAddItem={handleAddItemSubmit}
           onClose={closeActiveModal}
         />

@@ -7,12 +7,11 @@ function ToggleSwitch() {
     currentTemperatureUnitContext,
   );
 
-  console.log(currentTemperatureUnit);
-
   return (
     <label className="toggle-switch">
       <input
         onChange={handleToggleSwitchChange}
+        checked={currentTemperatureUnit === "C"}
         type="checkbox"
         className="toggle-switch__checkbox"
       />

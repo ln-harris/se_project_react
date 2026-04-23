@@ -1,7 +1,13 @@
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import useForm from "../../hooks/useForm.js";
 
-const AddItemModal = ({ isOpen, onAddItem, onClose, buttonText }) => {
+const AddItemModal = ({
+  isOpen,
+  onAddItem,
+  onClose,
+  buttonText,
+  errorMessage,
+}) => {
   const { values, handleChange, resetForm } = useForm({
     name: "",
     imageUrl: "",
@@ -95,6 +101,7 @@ const AddItemModal = ({ isOpen, onAddItem, onClose, buttonText }) => {
           </label>
         </legend>
       </fieldset>
+      {errorMessage && <p className="modal__error">{errorMessage}</p>}
     </ModalWithForm>
   );
 };
