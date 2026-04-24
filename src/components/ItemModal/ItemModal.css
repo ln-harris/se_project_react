@@ -20,7 +20,10 @@
 
 .modal__image {
   margin-bottom: 112px;
-  width: 100%;
+  width: 498px;
+  height: 498px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
   position: relative;
 }
 
