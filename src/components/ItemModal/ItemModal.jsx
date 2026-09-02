@@ -5,7 +5,9 @@ import CurrentUserContext from "../../contexts/CurrentUserContext.jsx";
 function ItemModal({ card, isOpen, onClose, onDeleteClick }) {
   const currentUser = useContext(CurrentUserContext);
 
-  const isOwn = card.owner === currentUser._id;
+  const ownerId = typeof card.owner === "object" ? card.owner?._id : card.owner;
+
+  const isOwn = ownerId === currentUser._id;
 
   return (
     <div
@@ -24,6 +26,7 @@ function ItemModal({ card, isOpen, onClose, onDeleteClick }) {
         <div className="modal__footer">
           <div>
             <h2 className="modal__caption">{card.name}</h2>
+
             <p className="modal__weather">Weather: {card.weather}</p>
           </div>
 
