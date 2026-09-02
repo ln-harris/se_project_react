@@ -41,3 +41,18 @@
   gap: 20px;
   list-style: none;
 }
+
+.clothes-section__add-button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.clothes-section__add-button:hover {
+  color: #000;
+}

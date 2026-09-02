@@ -16,6 +16,10 @@ WTWR stands for "What to Wear." This app uses the weather for a user's location 
 - ⏳ Includes loading states for weather data and item deletion
 - 🌙 Uses weather condition and day/night data to update the weather card
 
+## Backend Repository
+
+[View the WTWR backend repository](https://github.com/ln-harris/se_project_express)
+
 ## Tech Stack
 
 - React

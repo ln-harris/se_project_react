@@ -52,3 +52,43 @@
 .header__username:hover {
   opacity: 0.6;
 }
+
+.header__avatar,
+.header__avatar-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.header__avatar {
+  object-fit: cover;
+}
+
+.header__avatar-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.header__auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header__auth-button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.header__auth-button:hover {
+  opacity: 0.6;
+}

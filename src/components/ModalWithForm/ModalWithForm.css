@@ -2,12 +2,13 @@
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
   visibility: hidden;
 }
 
@@ -150,4 +151,87 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 18px;
+}
+
+.modal__actions {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal__actions .modal__submit {
+  position: static;
+  background-color: #000;
+  cursor: pointer;
+}
+
+.modal__actions .modal__submit:disabled {
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: default;
+}
+
+.modal__actions .modal__submit:disabled:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal__secondary-button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.modal__secondary-button:hover {
+  color: #000;
+}
+
+.modal_type_login .modal__content {
+  height: 304px;
+}
+
+.modal_type_login .modal__form {
+  position: static;
+}
+
+.modal_type_login .modal__actions {
+  left: 28px;
+  bottom: 36px;
+}
+
+.modal_type_register .modal__form {
+  position: static;
+}
+
+.modal_type_register .modal__actions {
+  left: 28px;
+  bottom: 36px;
+}
+
+.modal_type_register .modal__content {
+  width: 496px;
+  height: 456px;
+}
+
+.modal_type_register .modal__input {
+  margin: 8px 0 17.33px;
+}
+
+.modal_type_edit-profile .modal__content {
+  width: 496px;
+  height: 304px;
+}
+
+.modal_type_edit-profile .modal__form {
+  position: static;
+}
+
+.modal_type_edit-profile .modal__actions {
+  left: 28px;
+  bottom: 36px;
 }

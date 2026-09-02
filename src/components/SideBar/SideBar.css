@@ -1,20 +1,58 @@
 .sidebar {
   min-width: 229px;
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
+}
+
+.sidebar__user {
+  display: flex;
+  align-items: center;
   gap: 16px;
+  margin-bottom: 24px;
+}
+
+.sidebar__avatar,
+.sidebar__avatar-placeholder {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
 }
 
 .sidebar__avatar {
-  width: 56px;
-  height: 56px;
   object-fit: cover;
 }
 
+.sidebar__avatar-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
 .sidebar__username {
-  margin: 15px 0 0;
+  margin: 0;
   color: #000;
   font-size: 20px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 24px;
+}
+
+.sidebar__button {
+  padding: 0;
+  margin: 0 0 8px;
+  border: none;
+  background: transparent;
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.sidebar__button:hover {
+  opacity: 0.6;
 }
