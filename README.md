@@ -22,14 +22,26 @@ WTWR stands for "What to Wear." This app uses the weather for a user's location 
 
 ## Tech Stack
 
-- React
-- Vite
+### Frontend
+
 - JavaScript
-- CSS
+- React
 - React Router
-- json-server
+- Vite
+- HTML5
+- CSS3
 - OpenWeather API
-- GitHub Pages
+
+### Development Tools
+
+- Git
+- GitHub
+- ESLint
+- Prettier
+
+## Backend Repository
+
+https://github.com/ln-harris/se_project_express
 
 ## Deployment
 
