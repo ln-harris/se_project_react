@@ -6,12 +6,18 @@ function ItemModal({ card, isOpen, onClose, onDeleteClick }) {
   const currentUser = useContext(CurrentUserContext);
 
   const ownerId = typeof card.owner === "object" ? card.owner?._id : card.owner;
-
   const isOwn = ownerId === currentUser._id;
+
+  const handleOverlayClick = (evt) => {
+    if (evt.target === evt.currentTarget) {
+      onClose();
+    }
+  };
 
   return (
     <div
       className={`modal modal_type_preview ${isOpen ? "modal__opened" : ""}`}
+      onClick={handleOverlayClick}
     >
       <div className="modal__content modal__content_type_image">
         <button
@@ -26,7 +32,6 @@ function ItemModal({ card, isOpen, onClose, onDeleteClick }) {
         <div className="modal__footer">
           <div>
             <h2 className="modal__caption">{card.name}</h2>
-
             <p className="modal__weather">Weather: {card.weather}</p>
           </div>
 
