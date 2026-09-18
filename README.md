@@ -63,11 +63,10 @@ Images of the site will go here:
 
 ## Plans for Improvement
 
-- ⚠️ Improve API error handling with user-facing messages
-- 📱 Add responsive design for mobile devices
-- ✏️ Add support for editing clothing items
 - 🔐 Add user authentication and profile management
-- 🖌️ Change color of close button on cards
+- 🖌️ Change color of "close" and "like" button on cards
+- 🚫 Add visible validation messages to every form so users understand why their input is invalid.
+- ❤️ Add a “Liked Items” tab to the profile page where users can view all clothing items they have liked.
 
 ## Project Pitch Video
 
