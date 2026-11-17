@@ -1,5 +1,5 @@
 const baseUrl =
-  process.env.NODE_ENV === "production"
+  import.meta.env.PROD
     ? "https://api.linwtwr.crabdance.com"
     : "http://localhost:3001";
 

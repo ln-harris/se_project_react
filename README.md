@@ -47,6 +47,17 @@ https://github.com/ln-harris/se_project_express
 
 **🖥️Live Site:** [Click here to View Project Demo](https://ln-harris.github.io/se_project_react/)
 
+To publish updates to GitHub Pages:
+
+1. Run `npm ci` to install dependencies.
+2. Run `npm run lint` to check the source.
+3. Run `npm run deploy` to build the app and publish `dist` to the `gh-pages` branch. This requires Git access to this repository.
+4. In the GitHub repository's **Settings → Pages**, select **Deploy from a branch**, choose **gh-pages** and **/ (root)**, then save.
+
+For a local production preview, run `npm run build` followed by `npm run preview`, then open the preview URL at `/se_project_react/`.
+
+The app uses hash routing (for example, `/se_project_react/#/profile`) so page refreshes work on GitHub Pages. Production requests use `https://api.linwtwr.crabdance.com`; that backend must be running and allow requests from `https://ln-harris.github.io` through CORS. GitHub Pages hosts only the frontend.
+
 Images of the site will go here:
 
 **Full Desktop View**  
