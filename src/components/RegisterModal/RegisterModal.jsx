@@ -37,6 +37,7 @@ function RegisterModal({ isOpen, onClose, onRegister, onLoginClick }) {
           className="modal__input"
           type="email"
           name="email"
+          autoComplete="username"
           value={values.email}
           onChange={handleChange}
           placeholder="Email"
@@ -51,6 +52,7 @@ function RegisterModal({ isOpen, onClose, onRegister, onLoginClick }) {
           className="modal__input"
           type="password"
           name="password"
+          autoComplete="new-password"
           value={values.password}
           onChange={handleChange}
           placeholder="Password"
@@ -65,6 +67,7 @@ function RegisterModal({ isOpen, onClose, onRegister, onLoginClick }) {
           className="modal__input"
           type="text"
           name="name"
+          autoComplete="name"
           value={values.name}
           onChange={handleChange}
           placeholder="Name"
@@ -79,6 +82,7 @@ function RegisterModal({ isOpen, onClose, onRegister, onLoginClick }) {
           className="modal__input"
           type="url"
           name="avatar"
+          autoComplete="photo"
           value={values.avatar}
           onChange={handleChange}
           placeholder="Avatar URL"

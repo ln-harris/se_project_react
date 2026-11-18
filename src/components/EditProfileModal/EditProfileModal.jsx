@@ -44,6 +44,7 @@ function EditProfileModal({ isOpen, onClose, onUpdateProfile }) {
           className="modal__input"
           type="text"
           name="name"
+          autoComplete="name"
           value={values.name}
           onChange={handleChange}
           placeholder="Name"
@@ -58,6 +59,7 @@ function EditProfileModal({ isOpen, onClose, onUpdateProfile }) {
           className="modal__input"
           type="url"
           name="avatar"
+          autoComplete="photo"
           value={values.avatar}
           onChange={handleChange}
           placeholder="Avatar URL"

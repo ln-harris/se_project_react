@@ -33,6 +33,7 @@ function LoginModal({ isOpen, onClose, onLogin, onRegisterClick }) {
           className="modal__input"
           type="email"
           name="email"
+          autoComplete="username"
           value={values.email}
           onChange={handleChange}
           placeholder="Email"
@@ -47,6 +48,7 @@ function LoginModal({ isOpen, onClose, onLogin, onRegisterClick }) {
           className="modal__input"
           type="password"
           name="password"
+          autoComplete="current-password"
           value={values.password}
           onChange={handleChange}
           placeholder="Password"
