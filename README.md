@@ -12,7 +12,7 @@ WTWR stands for "What to Wear." This app uses the weather for a user's location 
 - ➕ Allows users to add new clothing items through a controlled form modal
 - 🗑️ Allows users to delete clothing items with a confirmation modal
 - 👤 Includes a profile page with client-side routing using React Router
-- 🔄 Fetches, adds, and deletes clothing items through a mock API using `json-server`
+- 🔄 Fetches, adds, and deletes clothing items through the Express API backed by MongoDB
 - ⏳ Includes loading states for weather data and item deletion
 - 🌙 Uses weather condition and day/night data to update the weather card
 
@@ -42,6 +42,14 @@ WTWR stands for "What to Wear." This app uses the weather for a user's location 
 ## Backend Repository
 
 https://github.com/ln-harris/se_project_express
+
+## Local Development
+
+Keep the backend and frontend running in separate terminals.
+
+1. Start MongoDB on `127.0.0.1:27017`.
+2. In `se_project_express`, run `npm ci` and then `npm start`. The API listens at `http://localhost:3001` by default.
+3. In `se_project_react`, run `npm ci` and then `npm run dev`.
 
 ## Deployment
 
